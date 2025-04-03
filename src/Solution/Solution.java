@@ -194,7 +194,7 @@ public class Solution extends JFrame
         return button;
     }
 
-    private void registerUser()
+    void registerUser()
     {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword());
@@ -220,7 +220,7 @@ public class Solution extends JFrame
         statusLabel.setText("✅ Registration Successful!");
     }
 
-    private void loginUser()
+    void loginUser()
     {
         String enteredUsername = loginUsernameField.getText();
         String enteredPassword = new String(loginPasswordField.getPassword());
@@ -245,12 +245,12 @@ public class Solution extends JFrame
         repaint();
     }
 
-    private boolean checkUserName(String username)
+    boolean checkUserName(String username)
     {
         return username.length() <= 5 && username.contains("_");
     }
 
-    private boolean checkPasswordComplexity(String password)
+    boolean checkPasswordComplexity(String password)
     {
         return password.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$");
     }
